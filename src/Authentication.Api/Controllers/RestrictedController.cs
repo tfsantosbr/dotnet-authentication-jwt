@@ -5,15 +5,8 @@ namespace Authentication.Api.Controllers;
 
 [ApiController]
 [Route("restricted")]
-public class UserInfoController : ControllerBase
+public class RestrictedController : ControllerBase
 {
-    private readonly ILogger<UserInfoController> _logger;
-
-    public UserInfoController(ILogger<UserInfoController> logger)
-    {
-        _logger = logger;
-    }
-
     [HttpGet("anonymous")]
     [AllowAnonymous]
     public IActionResult Anonymous() =>
