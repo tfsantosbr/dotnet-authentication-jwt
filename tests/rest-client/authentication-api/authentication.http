@@ -1,0 +1,8 @@
+### Request Token
+POST https://localhost:7071/authentication HTTP/1.1
+content-type: application/json
+
+{
+    "username": "tiago@email.com",
+    "password": "dev@123"
+}

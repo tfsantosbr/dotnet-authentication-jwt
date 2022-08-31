@@ -1,0 +1,13 @@
+@baseUrl = https://localhost:7067
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0NWVjY2QyYi1jMDUwLTRhMWMtYjY2Yy1lNTBhNzcwODYxMzQiLCJuYW1lIjoidGlhZ29AZW1haWwuY29tIiwicm9sZSI6IkFkbWluIiwiSXNBY3RpdmUiOiJGYWxzZSIsIlBhaWRVc2VyIjoiRmFsc2UiLCJuYmYiOjE2NjE5NzY4NTIsImV4cCI6MTY2MTk4NDA1MiwiaWF0IjoxNjYxOTc2ODUyfQ.C5eOSayQjLIYybtZ2RLVEMgE3JZhfZAfhlX3FZGWg5I
+
+### Access Anonymous Endpoint
+GET {{baseUrl}}/restricted/anonymous HTTP/1.1
+
+### Access Authenticated Endpoint
+GET {{baseUrl}}/restricted/authenticated HTTP/1.1
+Authorization: Bearer {{token}}
+
+### Access Admin Endpoint
+GET {{baseUrl}}/restricted/admin HTTP/1.1
+Authorization: Bearer {{token}}
